@@ -1,0 +1,17 @@
+.wishlist{
+    margin-top: 10%;
+}
+img.card-img-top {
+    width: 171px;
+    height: 235px;
+    transition: .5s ease-in-out;
+}
+.card-img-top:hover{
+    scale: calc(1.07);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 019);
+}
+@media(max-width:768px){
+    .wishlist{
+        margin-top: 50%;
+    }
+}

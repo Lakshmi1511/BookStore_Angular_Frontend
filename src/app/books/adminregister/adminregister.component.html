@@ -1,0 +1,65 @@
+<div class="container mt-3">
+    <div class="row ">
+      <h6 class="text-center" style=" width: 500px; margin: 10px 320px  20px; line-height: 2px;border-bottom: 1px solid black;text-align: center;">
+          <span style="background: white;padding: 0 10px;">BOKSTOREK</span>
+        </h6>
+        <h3 class="text-center">ADMIN REGISTER</h3> 
+  </div>
+  
+  <div class="login mt-2 bg-dark text-center" 
+  style="width: 380px;height: 470px;border-radius: 20px;margin-left: 390px;">
+  <i class="fa-solid fa-circle-user"
+   style="color: #f2f2f2;font-size: 100px;margin-top: 20px;"></i>
+  <div class="mt-2">
+  <h6 class="text-center" style="margin: 10px 50px 20px; line-height: 2px;border-bottom: 1px solid white;text-align: center;">
+    <span class="bg-dark text-light text-center" style="padding: 0 10px;">REGISTRATION</span>
+  </h6>
+  
+  </div>
+  
+       <form [formGroup]="adminRegisterForm">
+  
+          <input type="text" placeholder="Name" name="adminName" formControlName="adminName"
+          class="form-control mt-2 ms-4" style="width: 320px;margin-left: 20px;"> 
+          <!-- name validation -->
+          <div *ngIf="this.adminRegisterForm.get('adminName')?.errors && this.adminRegisterForm.get('adminName')?.touched" 
+          class="text-danger mb-2" style="margin-left: 20px;font-size: 13px;">Name is Required</div>
+    
+  
+          <input type="password" placeholder="Password" name="adminPswd" formControlName="adminPswd"
+          class="form-control mt-2 ms-4" style="width: 320px;margin-left: 20px;">
+           <!-- pswd validation -->
+          <div *ngIf="this.adminRegisterForm.get('adminPswd')?.errors && this.adminRegisterForm.get('adminPswd')?.touched" 
+          class="text-danger mb-2" style="margin-left: 20px;font-size: 13px;">Password is Reqired</div> 
+    
+  
+          <input type="text" placeholder="Mobile Number" name="adminMobile" formControlName="adminMobile"
+          class="form-control mt-2 ms-4" style="width: 320px;margin-left: 20px;"> 
+          <!-- mobile validation -->
+         <div *ngIf="this.adminRegisterForm.get('adminMobile')?.errors && this.adminRegisterForm.get('adminMobile')?.touched" 
+          class="text-danger mb-2" style="margin-left: 20px;font-size: 13px;">
+          Invalid Mobile number please enter 10 digit Number</div> 
+  
+          <input type="text"placeholder="Email" name="adminEmail" formControlName="adminEmail"
+          class="form-control mt-2 ms-4" style="width: 320px;margin-left: 20px;">
+           <!-- email validation -->
+          <div *ngIf="this.adminRegisterForm.get('adminEmail')?.errors && this.adminRegisterForm.get('adminEmail')?.touched" 
+           class="text-danger mb-2" style="margin-left: 20px;font-size: 13px;">Invalid email</div>
+  
+           <input type="text" placeholder="Add your image" name="adminimage" formControlName="adminimage"
+          class="form-control mt-2 ms-4" style="width: 320px;margin-left: 20px;">
+  
+          <button (click)="adminRegister()"
+          class="btn btn-light text-dark mt-3" >Register</button>
+    <br>
+     <div class="text-center">
+          <span class="ms-2 text-light text-center">Already have account ? <a routerLink="/adminlogin" class="text-light">login</a></span>
+        </div>
+       </form>
+  
+      </div>
+  
+  </div>
+  
+  
+  

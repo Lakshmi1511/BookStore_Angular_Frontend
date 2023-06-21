@@ -1,0 +1,44 @@
+<div class="wishlist" >
+<!-- empty wishlist -->
+<div class="container border border-black m-5 p-5" *ngIf="emsg">
+    <div class="row text-center">
+        <div class="col">
+            <img class="border border-black"  id="img1" src="./../../../assets/wishlist.gif"  alt="">
+            <h3>Your Wishlist is empty</h3>
+            <button routerLink="/all-books" class="btn btn-outline-warning"><i class="fa fa-cart-plus text-black"></i></button>
+        </div>
+    </div>
+</div>
+
+<!-- wishlist with content  -->
+<section>
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let product of wishlist" >
+                <div class="card h-100 w-75">
+                    <!-- Product image-->
+                    <img class="card-img-top"  [src]="product.image" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{product.title}}</h5>
+                            <!-- Product price-->
+                            ${{product.price}}
+                        </div>
+                    </div>
+                    
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <button (click)="deletewish(product)" class="btn btn-outline-danger mt-auto" ><i class="fa fa-trash "></i></button>
+                            <button (click)="addcarts(product)"  class="btn btn-outline-warning mt-auto ms-4"><i class="fa fa-cart-plus"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+</div>
+</div>
+</section>
+</div>

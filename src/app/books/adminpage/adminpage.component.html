@@ -1,0 +1,96 @@
+<!-- log out -->
+<div *ngIf="logoutStatus" style="width: 100%;height: 100vh;" class=" justify-content-center mt-5 text-center">
+    <div class="col text-center mt-5">
+        <h1 class="mt-5 text-dark text-center">Pleas wait.... <br> while your logging out ...</h1>
+
+    </div>
+    <!-- <img src="https://open.assembly.go.kr/images/ajax_loader.gif" alt=""> -->
+    <div class="col text-center justify-content-evently mt-4">
+        <img width="250px" src="https://cdn.dribbble.com/users/1797873/screenshots/5310497/logout.gif" alt="">
+    </div>
+</div>
+
+<!-- delete successMsg
+<div *ngIf="deleteSuccessMsg" style="width: 100%;height: 100vh;" class="d-flex justify-content-center">
+  <h1 class="mt-5 text-danger text-center">{{deleteSuccessMsg}}</h1>
+</div>
+
+delete confirm child -->
+<!-- <app-delete-confirm (onDelete)="deleteFromParent()" (onCancel)="cancelDeleteConfirm()" [deleteadminacnt]="adminacnt"></app-delete-confirm> -->
+-->
+
+<!-- Navigation-->
+<ng-container *ngIf="!deleteConfirmStatus">
+    <div *ngIf="!logoutStatus">
+        <nav *ngIf="!deleteConfirmStatus" class="navbar navbar-expand-lg navbar-light"
+            style="background-color: #063547;">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" routerLink="/">
+                    <h3 class=" text-center text-white">&nbsp; Bokstorek </h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse me-5 justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-user" style="color: #f9fafb;"></i> Admin Account
+                            </a>
+                            <ul class="dropdown-menu border">
+                                <li><a class="dropdown-item btn" (click)="deleteAccount()"><i class="fa-solid fa-trash"
+                                            style="color: #00060f;"></i> Account</a></li>
+                                <li><a class="dropdown-item btn" (click)="logout()"><i
+                                            class="fa-solid fa-right-from-bracket"
+                                            style="color: #01060e;"></i>logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- ===========sidenvavbar =================-->
+        <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse ">
+            <div class="position-sticky ">
+                <div class="list-group list-group-flush  " style="width: 215px;height: 100%;" >
+                    <a class="list-group-item list-group-item-action  text-center text-light"
+                        style="background-color: #063547; margin-top: 43px;">
+                        <img src="https://i.postimg.cc/Kj5GVG8P/c1.jpg"
+                            width="170px" style="margin-top: 1px;border-radius: 110px;margin-bottom: 174px;" alt="">
+                    </a>
+                    <a class="list-group-item list-group-item-action text-center" style="background-color: #063547;"
+                        routerLink="/adminpage">
+                        <span class="btn text-light " style="border: none;">Home</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action text-center" style="background-color: #063547;"
+                        routerLink="/addbook">
+                        <span class="btn text-light " style="border: none;">Add Book</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action text-center " style="background-color: #063547;"
+                        routerLink="/deletebook">
+                        <span class="btn text-light" style="border: none;">Delete Book</span>
+                    </a>
+                   
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- ===========main-content=========== -->
+
+        <div class="heading">
+            <div>
+                <h1>Welcome <span style="color: black;">{{currentAdmin}}</span></h1>
+            </div>
+
+            <p>This is a Dummy Data : Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi distinctio dolor ab
+                ad esse, blanditiis eius quasi est quaerat quia modi recusandae natus, eaque consectetur saepe commodi
+                nesciunt, laboriosam nisi! lo</p>
+
+        </div>
+    </div>
+</ng-container>

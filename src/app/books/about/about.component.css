@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Dosis:wght@200&family=Explora&family=Great+Vibes&family=Handlee&family=Moon+Dance&family=Parisienne&family=Pinyon+Script&family=Playfair+Display&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap");
+ 
+a{
+    text-decoration: none;
+ }
+.about_section {
+    position: relative;
+    background-color: #f5f6f9;
+  }
+  
+  .about_section .row {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .about_section .img-box img {
+    width: 100%;
+  }
+  
+  .about_section .detail-box p {
+    margin-top: 15px;
+  }
+  
+  .about_section .detail-box a {
+    display: inline-block;
+    padding: 10px 45px;
+    background-color: #44b89d;
+    color: #ffffff;
+    border-radius: 45px;
+    border: 1px solid #44b89d;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top: 15px;
+  }
+  
+  .about_section .detail-box a:hover {
+    background-color: transparent;
+    color: #44b89d;
+  }
+.layout_padding {
+    padding: 90px 0;
+}
+#wishlist{
+    color: white;
+    margin-left: 500%;
+    text-decoration: none;
+ }
+ h3{
+    
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+ }
+ .search{
+    position: relative;
+    top: 0px;
+    right: 12px;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    background-color: #44b89d;
+    border-radius: 100%;
+}
+@media(max-width:700px){
+    #wishlist{
+        margin-left: 0;
+    }
+}

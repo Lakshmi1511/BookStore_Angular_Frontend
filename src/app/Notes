@@ -1,0 +1,31 @@
+ e commerce front endd
+ 1)create an new angular project: ng new  projectname
+ 2)run angular
+ 3)add bootstrap,fontawesome,google fonts
+ 4)lazy loading- 
+       its a process of loading componenet,modueles etc
+       it improves application loading time
+5)ng g m products --route products --module app.module
+6)add router-outlet inside app.componenet.html
+7) create componenetsshoid lazy loaded in the product module
+    all-products =ng g c products/all-products
+    cart-  ng g c products/cart
+    wishlist-ng g c products/wishlist
+8)setup path for each componenet
+  inside product.module.file
+9)create page not found componenet
+10)create header and footer -ng g c header and ng g c footer
+
+11)componenet designing
+12)backend integration
+
+13)angular services
+ ng g s products/api
+
+14)import http client module in product.module.ts
+15)to connect api and httpclientmodule we are using dependency injection in api servie.ts
+
+16) integration
+
+17) search concept
+18)pipe creation : ng g p products/pipes/filter  used to connect two componenets

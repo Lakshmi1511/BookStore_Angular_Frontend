@@ -1,0 +1,25 @@
+img{
+    height: 150px;
+    width: 25%;
+    border-radius: 20px;
+}
+.wishlist{
+    margin-top: 10%;
+}
+
+.image1{
+    width:75%;
+}
+@media(max-width:768px){
+    .wishlist{
+        margin-top: 50%;
+    }
+
+    img{
+        width:50%;
+        height: 100px;
+    }
+    table{
+        width: 50%;
+    }
+}

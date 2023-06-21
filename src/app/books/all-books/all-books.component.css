@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Dosis:wght@200&family=Explora&family=Great+Vibes&family=Handlee&family=Moon+Dance&family=Parisienne&family=Pinyon+Script&family=Playfair+Display&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap");
+ 
+#wishlist{
+    color: white;
+    margin-left: 422%;
+    text-decoration: none;
+ }
+ h3{
+    
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+ }
+ .search{
+    position: relative;
+    top: 0px;
+    right: 12px;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    background-color: #44b89d;
+    border-radius: 100%;
+}
+@media(max-width:700px){
+    #wishlist{
+        margin-left: 0;
+    }
+}

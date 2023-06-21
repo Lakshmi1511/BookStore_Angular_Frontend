@@ -1,0 +1,46 @@
+<div class="container mt-5">
+    <div class="row ">
+      <div class="login" >
+        <h6 class="text-center" style="margin: 10px 310px 20px;width:500px; line-height: 2px; border-bottom: 1px solid black;">
+          <span class="text-center" style="background: white;padding: 0 10px;">BOKSTOREK</span>
+        </h6>
+      </div>
+        <h3 class="text-center">ADMIN LOGIN</h3> 
+  </div>
+  
+  <div class="login mt-5 bg-dark text-center" 
+  style="width: 370px;height: 380px;border-radius: 20px;margin-left: 390px;">
+  <i class="fa-solid fa-circle-user"
+   style="color: #f2f2f2;font-size: 100px;margin-top: 20px;"></i>
+  
+   <div class="mt-4 text-center">
+    <h6 class="text-center" style=" width: 200px; margin: 10px 90px 20px; line-height: 2px;border-bottom: 1px solid white;text-align: center;">
+      <span class="bg-dark text-light text-center" style="padding: 0 10px;">ADMIN LOGIN</span>
+    </h6>
+  </div>
+  
+        <form [formGroup]="adminLoginForm" (ngSubmit)="adminLogin()">
+  
+          <input type="text" placeholder="Name" name="adminName" formControlName="adminName"
+          class="form-control mt-2 ms-4" style="width: 310px;">
+           <div *ngIf="this.adminLoginForm.get('adminName')?.errors && this.adminLoginForm.get('adminName')?.touched"
+          class="text-danger" style="margin-left: 20px;font-size: 13px;">Name is Required</div> 
+  
+  
+        <input type="password" placeholder="Password" name="adminPswd" formControlName="adminPswd"
+        class="form-control mt-2 ms-4" style="width: 310px;">
+         <div *ngIf="this.adminLoginForm.get('adminPswd')?.errors && this.adminLoginForm.get('adminPswd')?.touched"
+        class="text-danger" style="margin-left: 20px;font-size: 13px;">Password is Required</div> 
+  
+
+   <br>
+        <button type="sumbit" class="btn btn-light text-dark" >Login</button>
+   <br>
+   
+   <div class="text-center">
+        <span class="ms-2 text-light text-center">New User? <a routerLink="/adminregister" class="text-light">Register</a></span>
+      </div>
+        </form>
+  
+      </div>
+</div>  

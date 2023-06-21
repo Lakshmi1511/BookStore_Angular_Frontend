@@ -1,0 +1,92 @@
+<ng-container>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #063547;">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" routerLink="/">
+                    <h3 class=" text-center text-white">&nbsp; Bokstorek </h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse me-5 justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-user" style="color: #f9fafb;"></i> Admin Account
+                            </a>
+                            <ul class="dropdown-menu border">
+                                <li><a class="dropdown-item btn" (click)="logout()"><i
+                                            class="fa-solid fa-right-from-bracket"
+                                            style="color: #01060e;"></i>logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+
+        <!-- ===========sidenvavbar =================-->
+        <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse ">
+            <div class="position-sticky ">
+                <div class="list-group list-group-flush  " style="width: 215px;">
+                    <a class="list-group-item list-group-item-action  text-center text-light"
+                        style="background-color: #063547; margin-top: 67px;">
+                        <img src="https://i.postimg.cc/Kj5GVG8P/c1.jpg"
+                                                    width="170px" style="margin-top: 1px;border-radius: 110px;margin-bottom: 174px;" alt="">
+                    </a>
+                    <a class="list-group-item list-group-item-action text-center" style="background-color: #063547;"
+                        routerLink="/adminpage">
+                        <span class="btn text-light " style="border: none;">Home</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action text-center" style="background-color: #063547;"
+                        routerLink="/addbook">
+                        <span class="btn text-light " style="border: none;">Add Book</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action text-center " style="background-color: #063547;"
+                        routerLink="/deletebook">
+                        <span class="btn text-light" style="border: none;">Delete Book</span>
+                    </a>
+                  
+
+                </div>
+            </div>
+        </nav>
+        <!-- ===========main-content=========== -->
+    </div>
+</ng-container>
+
+<div>
+    <section>
+        <div class="container px-4 px-lg-5" style="margin-left: 206px;
+        margin-top: -464px;">
+            <div class="row justify-content-center">
+                <div *ngFor="let product of allproducts" class="col-lg-3 col-md-3 col-sm-2 mb-3">
+                    <div class="card w-75 align-items-center">
+                        <!-- Product image-->
+                        <img class="card-img-top" [src]="product.image" alt="..." />
+                        <!-- Product details-->
+                        <div class="">
+                            <div class="text-center mt-2">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">{{product.title}}</h5>
+                                <!-- Product price-->
+                                ${{product.price}}
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <!-- <button (click)="addtowishlist(product)" class="btn btn-outline-danger mt-auto" ><i class="fa fa-heart "></i></button>-->
+                                <button  (click)="deletebook(product)" class="btn btn-outline-danger mt-auto ms-2" >  <i class="fa-solid fa-trash"></i></button> 
+                        </div>
+    
+                        </div>
+                    </div>
+                </div>
+    </div>
+    </div>
+    </section>
+    </div>

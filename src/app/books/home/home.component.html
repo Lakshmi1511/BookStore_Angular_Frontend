@@ -1,0 +1,313 @@
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #063547;">
+  <div class="container px-4 px-lg-5">
+    <a class="navbar-brand" routerLink="/home">
+      <h3 class=" text-center text-white">&nbsp; Bokstorek </h3>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+        class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link pl-lg-0 text-white" style="margin-left: 95px;" aria-current="page" href="/home">Home </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link text-white" aria-current="page" href="/about"> About <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/all-books">Categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" aria-current="page" href="contact">Contact Us</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+        <li class="nav-item">
+          <input (keyup)="search($event)" type="text" class="form-control ms-4 "
+            style="border-radius: 45px; border: none;" placeholder="Search here...">
+        </li>
+        <button type="submit" class="search"><i class="fa fa-search mt-2" aria-hidden="true"></i>
+        </button>
+        <li class="nav-item"><a class="nav-link active  " aria-current="page" id="wishlist"
+            routerLink="books/wishlist">Wishlist</a></li>
+            <a routerLink="/adminlogin" type="submit" class="btn btn-outline-light"><i class="fa-solid fa-user"></i> Admin</a>
+      </ul>
+      <form class="d-flex">
+        <a routerLink="books/cart" class="btn btn-outline-light" type="submit" style="display: none;">
+          <i class="bi-cart-fill me-1"></i>
+          Cart
+          <span class="badge bg-light text-dark ms-1 rounded-pill">{{cartcount}}</span>
+        </a>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<div class="hero_area">
+  <!-- end header section -->
+  <!-- slider section -->
+  <section class="slider_section layout_padding ">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container ">
+            <div class="row ms-4">
+              <div class="col-md-6">
+                <div class="detail-box">
+                  <h5>
+                    Bokstorek Bookstore
+                  </h5>
+                  <h1>
+                    For All Your <br>
+                    Reading Needs
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quam velit saepe dolorem deserunt quo
+                    quidem ad optio.
+                  </p>
+                  <a href="">
+                    Read More
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="img-box">
+                  <img src=" ./../../../../assets/slider-img.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container ">
+            <div class="row ms-4">
+              <div class="col-md-6">
+                <div class="detail-box">
+                  <h5>
+                    Bokstorek Bookstore
+                  </h5>
+                  <h1>
+                    For All Your <br>
+                    Reading Needs
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quam velit saepe dolorem deserunt quo
+                    quidem ad optio.
+                  </p>
+                  <a href="">
+                    Read More
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="img-box">
+                  <img src=" ./../../../../assets/slider-img.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container ">
+            <div class="row ms-4">
+              <div class="col-md-6">
+                <div class="detail-box">
+                  <h5>
+                    Bokstorek Bookstore
+                  </h5>
+                  <h1>
+                    For All Your <br>
+                    Reading Needs
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quam velit saepe dolorem deserunt quo
+                    quidem ad optio.
+                  </p>
+                  <a href="">
+                    Read More
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="img-box">
+                  <img src=" ./../../../../assets/slider-img.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- end slider section -->
+</div>
+
+
+<!-- catagory section -->
+
+
+
+<!-- end catagory section -->
+
+<!-- about section -->
+
+<section class="about_section layout_padding">
+  <div class="container ">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="img-box">
+          <img src=" ./../../../../assets/about-img.png" alt="">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="detail-box">
+          <div class="heading_container">
+            <h2>
+              About Our Bookstore
+            </h2>
+          </div>
+          <p>
+            At cumque tenetur iste molestiae, vel eum reiciendis assumenda! Numquam, repudiandae. Consequuntur obcaecati
+            recusandae aliquam, amet doloribus eius dolores officiis cumque? Quibusdam praesentium pariatur sapiente
+            mollitia, amet hic iusto voluptas! Iusto quo earum vitae excepturi, ipsam aliquid deleniti assumenda culpa
+            deserunt.
+          </p>
+          <a href="">
+            Read More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end about section -->
+
+<!-- blog section -->
+
+<section class="blog_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>
+        From Our Blog
+      </h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="box">
+          <div class="img-box">
+            <img src=" ./../../../../assets/b1.jpg" alt="">
+            <h4 class="blog_date">
+              <span>
+                19 January 2021
+              </span>
+            </h4>
+          </div>
+          <div class="detail-box">
+            <h5>
+              Eius, dolor? Vel velit sed doloremque
+            </h5>
+            <p>
+              Incidunt magni explicabo ullam ipsa quo consequuntur eveniet illo? Aspernatur nam dolorem a neque? Esse
+              eaque dolores hic debitis cupiditate, ad beatae voluptatem numquam dignissimos ab porro
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="box">
+          <div class="img-box">
+            <img src=" ./../../../../assets/b2.jpg" alt="">
+            <h4 class="blog_date">
+              <span>
+                19 January 2021
+              </span>
+            </h4>
+          </div>
+          <div class="detail-box">
+            <h5>
+              Minus aliquid alias porro iure fuga
+            </h5>
+            <p>
+              Officiis veritatis id illo eligendi repellat facilis animi adipisci praesentium. Tempore ab provident
+              porro illo ex obcaecati deleniti enim sequi voluptas at. Harum veniam eos nisi distinctio! Porro,
+              reiciendis eius.
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end blog section -->
+
+<!-- contact section -->
+
+<section class="contact_section layout_padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 ">
+        <div class="heading_container ">
+          <h2 class="">
+            Contact Us
+          </h2>
+        </div>
+        <form action="#">
+          <div>
+            <input type="text" placeholder="Name" />
+          </div>
+          <div>
+            <input type="email" placeholder="Email" />
+          </div>
+          <div>
+            <input type="text" placeholder="Phone Number" />
+          </div>
+          <div>
+            <input type="text" class="message-box" placeholder="Message" />
+          </div>
+          <div class="btn-box">
+            <button>
+              SEND
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div class="img-box">
+          <img src=" ./../../../../assets/contact-img.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end contact section -->

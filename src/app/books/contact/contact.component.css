@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Dosis:wght@200&family=Explora&family=Great+Vibes&family=Handlee&family=Moon+Dance&family=Parisienne&family=Pinyon+Script&family=Playfair+Display&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap");
+ 
+.contact_section h2 {
+    margin-bottom: 45px;
+  }
+  
+  .contact_section form {
+    padding-right: 35px;
+  }
+  
+  .contact_section input {
+    width: 100%;
+    border: 0;
+    height: 50px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    padding-left: 25px;
+    outline: none;
+    color: #101010;
+    background: #f1f1f1;
+  }
+  
+  .contact_section input::-webkit-input-placeholder {
+    color: #131313;
+  }
+  
+  .contact_section input:-ms-input-placeholder {
+    color: #131313;
+  }
+  
+  .contact_section input::-ms-input-placeholder {
+    color: #131313;
+  }
+  
+  .contact_section input::placeholder {
+    color: #131313;
+  }
+  
+  .contact_section input.message-box {
+    height: 120px;
+    border-radius: 15px;
+  }
+  
+  .contact_section .btn-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .contact_section button {
+    display: inline-block;
+    padding: 12px 45px;
+    background-color: #44b89d;
+    color: #ffffff;
+    border-radius: 45px;
+    border: 1px solid #44b89d;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+  }
+  .layout_padding {
+    padding: 90px 0;
+}
+  .contact_section button:hover {
+    background-color: transparent;
+    color: #44b89d;
+  }
+  
+  .contact_section .img-box img {
+    width: 100%;
+  }
+  
+
+#wishlist{
+    color: white;
+    margin-left: 500%;
+    text-decoration: none;
+ }
+ h3{
+    
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+ }
+ .search{
+    position: relative;
+    top: 0px;
+    right: 12px;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    background-color: #44b89d;
+    border-radius: 100%;
+}
+@media(max-width:700px){
+    #wishlist{
+        margin-left: 0;
+    }
+}
