@@ -1,16 +1,16 @@
 <div class="wishlist">
-<!-- empty cart -->
-<div class="container border border-black m-5 p-5" *ngIf="cartitems.length==0">
+<!-- empty bookstore -->
+<div class="container border border-black m-5 p-5" *ngIf="bookstoreitems.length==0">
     <div class="row text-center">
         <div class="col" >
-            <img class="border border-black" src=" ./../../../../assets/empty cart.gif " alt="">
-            <h3>Your cart is empty</h3>
+            <img class="border border-black" src=" ./../../../../assets/empty bookstore.gif " alt="">
+            <h3>Your bookstore is empty</h3>
             <button routerLink="/all-books" class="btn btn-outline-warning">Shop now</button>
         </div>
     </div>
 </div>
 
-<div class="container"  *ngIf="cartitems.length!=0">
+<div class="container"  *ngIf="bookstoreitems.length!=0">
     <div class="row">
         <div class="col">
             <table class=" table border border-dark m-5">
@@ -26,7 +26,7 @@
                 </thead>
                 <tbody>
 
-                   <tr *ngFor="let product of cartitems let i=index">
+                   <tr *ngFor="let product of bookstoreitems let i=index">
                         <td class="p-3" style="font-weight: bold;">{{i+1}}</td>
                         <td class="p-3"  style="font-weight: bold;">{{product.title}}</td>
                         <td class="p-3"  style="font-weight: bold;"><img [src]="product.image" class="image1" alt=""></td>
@@ -38,7 +38,7 @@
                 </tbody>
             </table>
             <div style="float: right; margin-bottom: 30px;">
-                <button (click)="removeall()" class="btn btn-outline-danger ms-4">Empty cart</button>
+                <button (click)="removeall()" class="btn btn-outline-danger ms-4">Empty bookstore</button>
                 <button class="btn btn-outline-warning ms-4" routerLink="">View More</button>
                 <button class="btn btn-outline-primary ms-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Check out</button>
                 <label for="" class="ms-5">Grand Total:${{grand}}</label>

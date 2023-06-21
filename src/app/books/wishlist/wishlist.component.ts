@@ -1,4 +1,4 @@
-import { CartService } from './../cart.service';
+import { bookstoreService } from './../bookstore.service';
 import { ApiService } from './../api.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -12,7 +12,7 @@ export class WishlistComponent implements OnInit {
   emsg:any
   wishlist:any
 
-  constructor(private api:ApiService,private router:Router,private cart:CartService) { }
+  constructor(private api:ApiService,private router:Router,private bookstore:bookstoreService) { }
   ngOnInit(): void {
     this.api.getwishlist().subscribe(
       (data:any)=>{
@@ -20,9 +20,9 @@ export class WishlistComponent implements OnInit {
         if(this.wishlist.length===0){
           this.emsg='Empty wishlist'
         }
-      },                                  //wishlist is a new variable to add the product in cart
+      },                                  //wishlist is a new variable to add the product in bookstore
       (data:any)=>{
-        this.emsg=data.error.message   //emsg is a new variable to display the error that the cart is empty
+        this.emsg=data.error.message   //emsg is a new variable to display the error that the bookstore is empty
       }
     )
   }
@@ -62,8 +62,8 @@ this.emsg='Empty wishlist'
   )
 }
 
-  addcarts(product:any){
-    this.cart.addcart(product)
+  addbookstores(product:any){
+    this.bookstore.addbookstore(product)
     this.deletewish(product)
   }
 

@@ -1,4 +1,4 @@
-import { CartService } from './../books/cart.service';
+import { bookstoreService } from './../books/bookstore.service';
 import { ApiService } from './../books/api.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,15 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-cartcount:number=0
+bookstorecount:number=0
 
-  constructor(private api: ApiService,private cart:CartService) { }
+  constructor(private api: ApiService,private bookstore:bookstoreService) { }
 
   ngOnInit(): void {
-    this.cart.cartlist.subscribe(
-      (data:any)=>{   //data has content inside cartlist
+    this.bookstore.bookstorelist.subscribe(
+      (data:any)=>{   //data has content inside bookstorelist
         if(data){
-          this.cartcount=data.length
+          this.bookstorecount=data.length
         }
       }
     )

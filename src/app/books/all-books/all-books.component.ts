@@ -1,4 +1,4 @@
-import { CartService } from '../cart.service';
+import { bookstoreService } from '../bookstore.service';
 import { ApiService } from '../api.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,15 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class AllBooksComponent implements OnInit {
   allproducts:any=[]; //all products array of details
   searchterm:string=''
-  cartcount:number=0
+  bookstorecount:number=0
   // product:any
-  constructor(private api:ApiService,private cart:CartService) { }
+  constructor(private api:ApiService,private bookstore:bookstoreService) { }
 
   ngOnInit(): void {
-    this.cart.cartlist.subscribe(
-      (data:any)=>{   //data has content inside cartlist
+    this.bookstore.bookstorelist.subscribe(
+      (data:any)=>{   //data has content inside bookstorelist
         if(data){
-          this.cartcount=data.length
+          this.bookstorecount=data.length
         }
       }
     )
@@ -50,8 +50,8 @@ this.api.addtowishlist(product).subscribe(  //tp connect with the api
 )
 }
 
-addcart(product:any){
-  this.cart.addcart(product)
+addbookstore(product:any){
+  this.bookstore.addbookstore(product)
 }
 }
 

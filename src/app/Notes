@@ -9,7 +9,7 @@
 6)add router-outlet inside app.componenet.html
 7) create componenetsshoid lazy loaded in the product module
     all-products =ng g c products/all-products
-    cart-  ng g c products/cart
+    bookstore-  ng g c products/bookstore
     wishlist-ng g c products/wishlist
 8)setup path for each componenet
   inside product.module.file

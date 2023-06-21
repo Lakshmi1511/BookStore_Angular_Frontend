@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { CartService } from '../cart.service';
+import { bookstoreService } from '../bookstore.service';
 
 @Component({
   selector: 'app-home',
@@ -8,15 +8,15 @@ import { CartService } from '../cart.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  cartcount:number=0
+  bookstorecount:number=0
 
-  constructor(private api:ApiService,private cart:CartService) { }
+  constructor(private api:ApiService,private bookstore:bookstoreService) { }
 
   ngOnInit(): void {
-    this.cart.cartlist.subscribe(
-      (data:any)=>{   //data has content inside cartlist
+    this.bookstore.bookstorelist.subscribe(
+      (data:any)=>{   //data has content inside bookstorelist
         if(data){
-          this.cartcount=data.length
+          this.bookstorecount=data.length
         }
       }
     )

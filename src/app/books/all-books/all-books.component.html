@@ -14,10 +14,10 @@
                 <li class="nav-item"><a class="nav-link active  " aria-current="page" id="wishlist"  routerLink="/wishlist">Wishlist</a></li>
             </ul>
             <form class="d-flex">
-                <a routerLink="/cart" class="btn btn-outline-light" type="submit">
-                    <i class="fa fa-cart-plus"></i> 
-                    Cart
-                    <span class="badge bg-light text-dark ms-1 rounded-pill">{{cartcount}}</span>
+                <a routerLink="/bookstore" class="btn btn-outline-light" type="submit">
+                    <i class="fa fa-bookstore-plus"></i> 
+                    bookstore
+                    <span class="badge bg-light text-dark ms-1 rounded-pill">{{bookstorecount}}</span>
                 </a>
             </form>
         </div>
@@ -49,7 +49,7 @@
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center">
                             <button (click)="addtowishlist(product)" class="btn btn-outline-danger mt-auto" ><i class="fa fa-heart "></i></button>
-                            <button  (click)="addcart(product)" class="btn btn-outline-warning mt-auto ms-2" >  <i class="fa fa-cart-plus"></i></button>
+                            <button  (click)="addbookstore(product)" class="btn btn-outline-warning mt-auto ms-2" >  <i class="fa fa-bookstore-plus"></i></button>
                     </div>
 
                     </div>

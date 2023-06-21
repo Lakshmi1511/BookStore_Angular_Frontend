@@ -1,36 +1,36 @@
 import { Router } from '@angular/router';
-import { CartService } from './../cart.service';
+import { bookstoreService } from './../bookstore.service';
 import { Component, OnInit } from '@angular/core';
 import { ParsedEventType } from '@angular/compiler';
 import party from "party-js";
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  selector: 'app-bookstore',
+  templateUrl: './bookstore.component.html',
+  styleUrls: ['./bookstore.component.css']
 })
-export class CartComponent implements OnInit {
-cartitems:any=[]
+export class bookstoreComponent implements OnInit {
+bookstoreitems:any=[]
 grand:any
 updatedtotal:any
-  constructor(private cart:CartService,private router:Router) { }
+  constructor(private bookstore:bookstoreService,private router:Router) { }
 
   ngOnInit(): void {
-this.cart.cartlist.subscribe(  //here cartlist is used bcz behaviour subject is in cartlist
+this.bookstore.bookstorelist.subscribe(  //here bookstorelist is used bcz behaviour subject is in bookstorelist
   (data:any)=>{
-    this.cartitems=data
+    this.bookstoreitems=data
   }
 )
 
-this.grand=this.cart.gettotal()
+this.grand=this.bookstore.gettotal()
 
   }
   removeitem(product:any){
-         this.cart.removecart(product)
+         this.bookstore.removebookstore(product)
   }
 
   removeall(){
-    this.cart.removeall()
+    this.bookstore.removeall()
   }
 
 //   discount3per(source:any){

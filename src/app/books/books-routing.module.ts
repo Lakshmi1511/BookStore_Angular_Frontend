@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BooksComponent } from './books.component';
-import { CartComponent } from './cart/cart.component';
+import { bookstoreComponent } from './bookstore/bookstore.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { AllBooksComponent } from './all-books/all-books.component';
 import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
@@ -27,7 +27,7 @@ const routes: Routes = [{path:'login',component:LoginComponent},
 {path:'about',component:AboutComponent},
 {path:'contact',component:ContactComponent},
 {path: 'all-books', component: AllBooksComponent },
-{path: 'cart', component: CartComponent },
+{path: 'bookstore', component: bookstoreComponent },
 {path: 'wishlist', component: WishlistComponent },
 {path: '**', component: PageNotFoundComponent  },
 ];

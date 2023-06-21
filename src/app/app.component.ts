@@ -7,7 +7,7 @@ import { NavigationStart, Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cart';
+  title = 'bookstore';
   showHead: boolean = false;
 
   ngOnInit() {

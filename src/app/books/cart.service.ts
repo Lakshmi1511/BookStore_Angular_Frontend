@@ -4,16 +4,16 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class CartService {
-cartarray:any=[];
-cartlist=new BehaviorSubject([])
+export class bookstoreService {
+bookstorearray:any=[];
+bookstorelist=new BehaviorSubject([])
   constructor() { }
 
-  //add to cart
-  addcart(product:any){
-    this.cartarray.push(product);
-    this.cartlist.next(this.cartarray)
-    console.log(this.cartlist);
+  //add to bookstore
+  addbookstore(product:any){
+    this.bookstorearray.push(product);
+    this.bookstorelist.next(this.bookstorearray)
+    console.log(this.bookstorelist);
     let total=this.gettotal()
     console.log(total);
   
@@ -22,27 +22,27 @@ cartlist=new BehaviorSubject([])
   //total price
   gettotal(){
    var grandsum=0
-   this.cartarray.map((item:any)=>{
+   this.bookstorearray.map((item:any)=>{
     grandsum+=item.price   //grandsum=grandsum+item
    })
    return grandsum;
   }
 
   //remove item
-  removecart(product:any){
-this.cartarray.map((item:any,index:any)=>{
+  removebookstore(product:any){
+this.bookstorearray.map((item:any,index:any)=>{
 if(product.id==item.id){
-  this.cartarray.splice(index,1)
+  this.bookstorearray.splice(index,1)
 }
 })
-this.cartlist.next(this.cartarray)  //remove and updation
+this.bookstorelist.next(this.bookstorearray)  //remove and updation
   }
 
 
-  //remove all itemms from cart when empty button is clicked
+  //remove all itemms from bookstore when empty button is clicked
   removeall(){
-    this.cartarray=[]
-    this.cartlist.next(this.cartarray)
+    this.bookstorearray=[]
+    this.bookstorelist.next(this.bookstorearray)
   }
 
   

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { BooksRoutingModule } from './books-routing.module';
 import { BooksComponent } from './books.component';
-import { CartComponent } from './cart/cart.component';
+import { bookstoreComponent } from './bookstore/bookstore.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,7 +25,7 @@ import { DeletebookComponent } from './deletebook/deletebook.component';
   declarations: [
     BooksComponent,
     AllBooksComponent,
-    CartComponent,
+    bookstoreComponent,
     WishlistComponent,
     FilterPipe,
     HomeComponent,
